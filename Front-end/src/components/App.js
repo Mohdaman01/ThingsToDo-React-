@@ -2,11 +2,14 @@ import TodoForm from "./todoForm";
 import List from './list';
 import { useEffect, useState } from "react";
 import axios from "axios";
+ 
 
 function App() {
 
   const [lists, setLists] = useState([]);
   const [render, setRender] = useState(false);
+  const api = 'https://thingstodoserver.onrender.com'
+   
 
   useEffect(() => {
 
@@ -14,7 +17,7 @@ function App() {
 
       try {
 
-        const { data } = await axios.get('http://localhost:8000/get-lists', {
+        const { data } = await axios.get(`${api}/get-lists`, {
 
           signal: AbortSignal.timeout(5000)
 
@@ -47,9 +50,9 @@ function App() {
   return (
     <div className="App">
       <h1 className="text-center heading">Things ToDo</h1>
-      <TodoForm setRender={setRender} />
+      <TodoForm setRender={setRender} api={api} />
       {lists.map((list) => (
-        <List list={list} key={list._id} setRender={setRender} />
+        <List list={list} key={list._id} setRender={setRender}  api={api} />
       ))}
 
     </div>

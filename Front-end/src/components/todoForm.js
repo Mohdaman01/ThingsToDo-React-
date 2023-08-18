@@ -5,6 +5,7 @@ import axios from 'axios';
 function TodoForm(props) {
 
     const setRender = props.setRender;
+    const api = props.api;
 
     const [title, setTitle] = useState('');
     const [date, setDate] = useState(getDate());
@@ -22,7 +23,7 @@ function TodoForm(props) {
 
         e.preventDefault();
 
-        axios.post('http://localhost:8000/create-list', {
+        axios.post(`${api}/create-list`, {
             category: title,
             description,
             date

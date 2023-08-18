@@ -6,11 +6,11 @@ function List(props) {
 
     const list = props.list
     const setRender = props.setRender;
+    const api = props.api
 
     async function deleteListHandler(id){
-        // console.log(id)
 
-        await axios.delete(`http://localhost:8000/delete-list`,{
+        await axios.delete(`${api}/delete-list`,{
             params : {
                 id
             }
