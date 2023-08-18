@@ -1,0 +1,46 @@
+
+.list-container{
+    display: flex;
+    width: 90%;
+    max-width: 700px;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(14, 76, 209);
+    border-radius: 5px;
+    padding:.4em .5em;
+    border: 2px solid #ccc;
+    margin-bottom: 1em;
+    -webkit-box-shadow: 1px 13px 6px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 13px 6px -5px rgba(0,0,0,0.75);
+    box-shadow: 1px 13px 6px -5px rgba(0,0,0,0.75);
+}
+
+#info{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+    margin-left: 1em;
+}
+
+#info p{
+    margin:.5em;
+}
+
+#cataegory{
+    color: white;
+    margin: .75em;
+    margin-left: auto;
+    text-align: center;
+    padding:1em;
+    padding-top:em;
+    background-color: #0a4fe3;
+    border-radius: 5px;
+}
+
+.delete-list{
+    background-color: red;
+    padding-top: 6px;
+    margin: 2px;
+    height: 3.5em;
+}
