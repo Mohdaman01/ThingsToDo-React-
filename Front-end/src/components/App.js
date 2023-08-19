@@ -26,6 +26,7 @@ function App() {
         if (data) {
 
           setLists(data.data.lists);
+          setRender(false);
   
         }
 
@@ -41,8 +42,6 @@ function App() {
 
 
     })();
-
-    setRender(false);
 
   }, [render]);
 
